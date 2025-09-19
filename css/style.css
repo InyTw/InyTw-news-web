@@ -128,3 +128,32 @@ a:hover {
     grid-template-columns: 1fr;
   }
 }
+
+/* ======== Main ======== */
+main {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 每排 5 個 */
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* 響應式調整 */
+@media (max-width: 1200px) {
+  main {
+    grid-template-columns: repeat(3, 1fr); /* 中螢幕顯示 3 個 */
+  }
+}
+
+@media (max-width: 900px) {
+  main {
+    grid-template-columns: repeat(2, 1fr); /* 平板顯示 2 個 */
+  }
+}
+
+@media (max-width: 600px) {
+  main {
+    grid-template-columns: 1fr; /* 手機顯示 1 個 */
+  }
+}
