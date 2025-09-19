@@ -5,11 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>網站傳送門 | InyTw</title>
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/bg.js"></script>
 </head>
 <body>
+  <canvas id="bg-canvas"></canvas>
+
   <header>
-    <h1>🔗 網站傳送門</h1>
+    <h1>🔗 Links</h1>
     <nav>
       <a href="index.html">首頁</a>
       <a href="news.html">新聞</a>
@@ -18,13 +19,26 @@
   </header>
 
   <main>
-    <h2>我的網站與資源</h2>
-    <ul>
-      <li><a href="https://github.com/InyTw">GitHub</a></li>
-      <li><a href="https://example.com">個人網站</a></li>
-      <li><a href="https://blog.example.com">部落格</a></li>
-    </ul>
+    <!-- 連結卡片範例 -->
+    <section class="card">
+      <h2>GitHub</h2>
+      <p>查看 InyTw 的 GitHub 專案與開源作品。</p>
+      <a href="https://github.com/InyTw" target="_blank">前往 GitHub</a>
+    </section>
+
+    <section class="card">
+      <h2>部落格 / 個人網站</h2>
+      <p>閱讀文章、教程，或了解更多 InyTw 的作品與分享。</p>
+      <a href="https://yourblog.com" target="_blank">前往網站</a>
+    </section>
+
+    <section class="card">
+      <h2>Discord 社群</h2>
+      <p>加入社群討論，與 InyTw 和其他開發者交流。</p>
+      <a href="#" target="_blank">加入 Discord</a>
+    </section>
   </main>
+
+  <script src="js/bg.js"></script>
 </body>
 </html>
-
