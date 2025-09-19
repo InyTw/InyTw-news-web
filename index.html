@@ -1,11 +1,97 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Hello GitHub Pages</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>InyTw — Personal Site</title>
+<meta name="description" content="Personal site for InyTw — Home, Live, News, Portal, GitHub contributions, theme toggle" />
+
+
+<link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <h1>Hello, I'm InyTw 👋</h1>
-  <p>This is my first GitHub Pages site!</p>
-</body>
+<body data-theme="dark">
+<div class="wrap">
+<header>
+<div class="brand">
+<div class="avatar">IT</div>
+<div>
+<div style="font-weight:700">InyTw</div>
+<div style="font-size:13px;color:var(--muted)">Developer · Bot maker · Web</div>
+</div>
+</div>
+
+
+<nav>
+<a class="btn" href="#home">Home</a>
+<a class="btn" href="#live">Live</a>
+<a class="btn" href="#news">News</a>
+<a class="btn" href="#portal">Portal</a>
+<a class="btn" href="#contrib">Contribs</a>
+</nav>
+
+
+<div class="controls">
+<div class="toggle" id="themeBtn">Toggle Theme</div>
+</div>
+</header>
+
+
+<main>
+<div>
+<section id="home" class="card">
+<h1>Welcome — InyTw</h1>
+<p class="lead">Hello! I'm InyTw. This is a lightweight GitHub Pages-ready single-file site with multi-section navigation, a news manager (local demo), a links portal, GitHub contributions embed, and a theme toggle.</p>
+
+
+<div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
+<a class="btn" href="https://github.com/InyTw" target="_blank">GitHub</a>
+<a class="btn" href="#contrib">View contributions</a>
+</div>
+</section>
+
+
+<section id="live" class="card">
+<h2>Live / Now</h2>
+<p class="lead">Current status or live embed. Replace embed with your Twitch, YouTube, or custom status.</p>
+<div style="margin-top:12px">
+<iframe width="100%" height="300" src="https://www.youtube.com/embed/live_stream?channel=UC-XXXXXX" title="Live stream" allowfullscreen></iframe>
+</div>
+</section>
+
+
+<section id="news" class="card">
+<h2>News</h2>
+<p class="lead">A simple news list stored in your browser (demo). On GitHub Pages you can replace this with static files or a headless CMS.</p>
+
+
+<form id="newsForm" style="display:flex;gap:8px;margin-top:12px">
+<input id="newsTitle" placeholder="Title" style="flex:1;padding:8px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text)" />
+<button class="btn" type="submit">Add</button>
+</form>
+
+
+<div class="news-list" id="newsList" style="margin-top:12px"></div>
+</section>
+
+
+</div>
+
+
+<aside>
+<div class="card">
+<h3>Portal — Links</h3>
+<div class="portal-grid" id="portalGrid" style="margin-top:10px">
+<a class="link-card" href="https://github.com/InyTw" target="_blank">GitHub</a>
+<a class="link-card" href="https://example.com" target="_blank">Blog / Site</a>
+<a class="link-card" href="mailto:yourmail@example.com">Email</a>
+<a class="link-card" href="#news">News</a>
+</div>
+</div>
+
+
+<div class="card" style="margin-top:12px">
+<h3>GitHub Contributions</h3>
+<div class="contrib" id="contribWrap">
+<iframe title="GitHub contributions" src="https://github.com/users/InyTw/contributions" style="height:220px"></iframe>
+<img id="ghFallback" alt="Contributions graph" src="https://ghchart.rshah.org/InyTw" />
 </html>
