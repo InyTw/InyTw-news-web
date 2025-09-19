@@ -45,6 +45,10 @@ header h1 {
 nav {
   display: flex;
   gap: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.05);
+  transition: background 0.3s;
 }
 
 nav a {
@@ -54,7 +58,6 @@ nav a {
   padding: 0.5rem 0.8rem;
   border-radius: 8px;
   transition: all 0.3s;
-  background: rgba(255,255,255,0.05);
 }
 
 nav a:hover {
@@ -65,7 +68,7 @@ nav a:hover {
 
 /* ======== 主題切換按鈕 ======== */
 #theme-toggle {
-  position: fixed;      /* 固定在右上角 */
+  position: fixed;      /* 固定右上角 */
   top: 1rem;
   right: 1rem;
   padding: 0.5rem 1rem;
@@ -137,15 +140,22 @@ body.light {
   color: var(--text-light);
 }
 
+/* 卡片在淺色模式 */
 body.light .card {
   background: var(--card-light);
   color: var(--text-light);
+}
+
+/* 導航列淺色模式 */
+body.light nav {
+  background: rgba(0,0,0,0.05);
 }
 
 body.light nav a {
   color: var(--text-light);
 }
 
+/* 主題切換按鈕保持一致 */
 body.light #theme-toggle {
   background: var(--accent);
   color: #fff;
@@ -156,5 +166,10 @@ body.light #theme-toggle {
 @media (max-width: 900px) {
   main {
     grid-template-columns: 1fr;
+  }
+  
+  #theme-toggle {
+    top: 1rem;
+    right: 1rem;
   }
 }
