@@ -1,18 +1,30 @@
-// 主題切換按鈕
+// 主題切換
 const themeToggle = document.getElementById('theme-toggle');
 
-// 檢查使用者是否已有主題設定
-if (localStorage.getItem('theme') === 'dark') {
-  document.body.classList.add('dark');
+// 讀取儲存主題
+if(localStorage.getItem('theme') === 'light') {
+  document.body.style.setProperty('--bg-dark', '#f5f5f5');
+  document.body.style.setProperty('--card-dark', '#ffffff');
+  document.body.style.setProperty('--text-dark', '#111827');
+} else {
+  document.body.style.setProperty('--bg-dark', '#0d1117');
+  document.body.style.setProperty('--card-dark', 'rgba(20,25,35,0.85)');
+  document.body.style.setProperty('--text-dark', '#cdd9f4');
 }
 
-// 點擊切換主題
 themeToggle.addEventListener('click', () => {
-  document.body.classList.toggle('dark');
-  
-  if (document.body.classList.contains('dark')) {
-    localStorage.setItem('theme', 'dark');
-  } else {
+  const current = localStorage.getItem('theme') || 'dark';
+  if(current === 'dark') {
+    // 切換淺色
+    document.body.style.setProperty('--bg-dark', '#f5f5f5');
+    document.body.style.setProperty('--card-dark', '#ffffff');
+    document.body.style.setProperty('--text-dark', '#111827');
     localStorage.setItem('theme', 'light');
+  } else {
+    // 切換深色
+    document.body.style.setProperty('--bg-dark', '#0d1117');
+    document.body.style.setProperty('--card-dark', 'rgba(20,25,35,0.85)');
+    document.body.style.setProperty('--text-dark', '#cdd9f4');
+    localStorage.setItem('theme', 'dark');
   }
 });
