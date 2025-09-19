@@ -28,3 +28,14 @@ themeToggle.addEventListener('click', () => {
     localStorage.setItem('theme', 'dark');
   }
 });
+
+// 已有主題切換代碼保持不變
+// 可加動畫控制，例如 iframe 先淡入
+window.addEventListener('DOMContentLoaded', () => {
+  const contrib = document.getElementById('gh-contrib');
+  contrib.style.opacity = 0;
+  setTimeout(() => {
+    contrib.style.transition = 'opacity 1s';
+    contrib.style.opacity = 1;
+  }, 300);
+});
